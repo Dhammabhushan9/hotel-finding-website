@@ -1,0 +1,67 @@
+<% layout("layout/boilerplate")  %>
+<body>
+    <form method="post" action="/listings" novalidate class="needs-validation">
+
+        
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h3>Let's connect with DOVE</h3>
+        <div>
+            <label for="title" class="form-lable">Title</label>
+            <input name="listing[title]" placeholder=" enter title" type="text" class="form-control" required>
+            <div class="invalid-feedback">
+                Looks good!
+              </div>
+        </div>
+
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder=" enter description" type="text"class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Looks good!
+              </div>
+        </div>
+        
+        <div>
+            <label for="image" class="form-lable">image</label>
+            <input name="listing[image]" placeholder=" enter image" type="text"class="form-control" required>
+            <div class="invalid-feedback">
+                image country
+              </div>
+        </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="price" class="form-lable">price</label>
+                    <input name="listing[price]" placeholder=" enter price" type="text"class="form-control" required>
+
+                    <div class="invalid-feedback">
+                        price required
+                      </div>
+                    
+                </div>
+               
+                <div class="col-8">
+                    <label for="location" class="form-lable">location</label>
+                    <input name="listing[location]" placeholder=" enter location" type="text"class="form-control" required>
+                    <div class="invalid-feedback">
+                        location required
+                      </div>
+                </div>
+            </div>
+        
+        <div>
+            <label for="country" class="form-lable">country</label>
+            <input name="listing[country]" placeholder=" enter country" type="text"class="form-control" required>
+            <div class="invalid-feedback">
+                country required
+              </div>
+        </div>
+    
+      <br><br>
+<button class="btn btn-dark">add</button>
+
+    </form>
+</div>
+</div>
+
+</body>

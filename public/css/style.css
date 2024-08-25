@@ -1,0 +1,116 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.container{
+    flex: 1;
+}
+.navbar {
+    height: 5rem;
+    background-color: rgb(248, 244, 244);
+}
+
+.fa-compass {
+    color: #fe424d !important;
+    font-size: 3rem !important; 
+}
+
+#navitem {
+    color: rgb(7, 6, 6) !important;
+    font-size: 1.2rem !important; 
+    
+}
+
+
+.footer-link{
+
+    color: black; 
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    text-decoration: underline;
+    
+}
+
+.footer-link{
+    width: 100%;
+}
+.footer-social{
+    width: 100%;
+}
+
+.footers{
+    text-align: center;
+height: 8rem;
+background-color: rgb(237, 221, 221);
+display: flex;
+flex-wrap: wrap;
+align-content:space-around;
+justify-content: space-evenly;
+
+}
+
+
+
+.card{
+   display: flex !important;
+   flex-wrap: wrap !important;
+   align-content:space-around !important;
+   justify-content: space-evenly !important;
+    border: none  !important;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+   
+  
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0%;
+}
+.listing-a{
+    text-decoration: none;
+    color: black;
+}
+.listing-a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.show-img{
+    height: 30vh;
+}
+
+.btn-show{
+    display: flex;
+    align-content:space-around !important;
+}
+
+.error-page{
+    background-color: #fe424d;
+}
+
+.card-shadow:hover{
+    box-shadow: 2px 5px 30px gray;
+   padding-top: 1rem;
+    border-radius: 2rem ;
+}
+.review-shadow{
+    box-shadow: 2px 5px 30px gray;
+    padding-top: 1rem;
+    border-radius: 1rem !important ;
+    margin-left: 1rem !important;
+}
+
+.card-review{
+    border: 1px solid black !important;
+   
+}

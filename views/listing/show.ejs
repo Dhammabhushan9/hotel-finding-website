@@ -1,0 +1,82 @@
+<% layout("layout/boilerplate")  %>
+<body>
+   
+<div class="row ">
+<div class="col-8 offset-2">
+  <br>
+        <h3><%= l.country %> | <%= l.location  %></h3>
+    </div>
+
+
+    <div class="card col-8 offset-2">
+            <img class="card-img-top show-img" src="<%= l.image %>" alt="Card image cap">
+        
+       
+        <div class="card-body">
+          <p class="card-text"><b><%= l.title  %></b></p>
+         <%= l.description %>
+        
+          <br>RS:<%= l.price  %>/-
+          <br><%= l.location  %>
+          <br><%= l.country %>
+          <br>
+          
+    </div>    
+</div>
+
+</div>
+<div class="col-3 btn-show">
+    <a href="/listing/<%= l._id %>/edit" class="btn  btn-danger col-5  offset-9">edit</a>
+    <br>
+
+  <form method="POST" action="/listings/<%= l._id %>?_method=DELETE">
+   <button class="btn  btn-danger offset-4" >delet page</button>
+</form>
+</div>
+
+
+
+<hr><form method="post" action="/listing/<%= l._id %>/review">
+
+  <div class="card review-shadow" style="width: 18rem;">
+    <h1>Review</h1>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="comment" class="form-label">Comment</label>
+        <input type="text" id="comment" name="review[comment]" class="form-control" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="rating" class="form-label">Rating</label>
+        <input type="range" id="rating" min="1" max="5" name="review[rating]" class="form-range" required>
+      </div>
+
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </div>
+
+  </div>
+
+</form>
+
+ 
+
+ 
+</body>
+<div class="row">
+  <% for (let r of l.reviews) { %>
+    <div class="card card-review col-5" >
+      <div class="card-body">
+        <h3 class="card-title">bhushan</h3> 
+        <p class="card-text"><%= r.comment %></p>
+        <p class="card-text"><%= r.rating %>  STAR</p>
+        <form method="post" action="/listing/<%= l._id %>/review/<%= r._id %>?_method=DELETE">
+
+            <button  class="btn btn-dark">DELETE</button>
+          </form>
+
+      </div>
+
+    </div>
+  <% } %>
+</div>
+</body>
